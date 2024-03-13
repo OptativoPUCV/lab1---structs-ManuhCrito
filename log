@@ -60,3 +60,17 @@ exercises.c:77:1: error: expected identifier or ‘(’ before ‘{’ token
       | ^
 Compilation failed
 71a1297
+Wed 13 Mar 2024 09:14:01 PM UTC: 
+ exercises.c | 12 +++++-------
+ 1 file changed, 5 insertions(+), 7 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:80:23: error: statement with no effect [-Werror=unused-value]
+   80 |       if (i == 0) aux == arr[i];
+      |                   ~~~~^~~~~~~~~
+exercises.c:88:1: error: control reaches end of non-void function [-Werror=return-type]
+   88 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+4feb2fa
