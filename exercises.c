@@ -10,6 +10,15 @@ Descripción: Escribe una función que tome un arreglo de enteros
 y su tamaño, y devuelva el valor más grande del arreglo.
 */
 int findMax(int arr[], int size) { return 0; }
+{
+  int maxNum = 0;
+  for (int i = 0; i < size; i++)
+    {
+      if (i == 0) maxNum = arr[i];
+      else if (arr[i] > maxNum) maxNum = arr[i];
+    }
+  return maxNum;
+}
 
 /*
 Ejercicio 2: Invertir un Arreglo
@@ -17,6 +26,15 @@ Descripción: Escribe una función que tome un arreglo y su tamaño, y luego
 invierta el orden de sus elementos.
 */
 void reverseArray(int arr[], int size) {}
+{
+  int temp;
+  for (int i = 0; i < size / 2; i++)
+    {
+      temp = arr[i];
+      arr[i] = arr[size - i - 1];
+      arr[size - i - 1] = temp;
+    }
+}
 
 /*
 Ejercicio 3: Filtrar Números Pares
@@ -25,6 +43,21 @@ y su tamaño, y luego devuelva un nuevo arreglo que contenga solo
 los números pares del arreglo original.
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize) { return NULL; }
+{
+  int newArr = NULL;
+  *newSize = 0;
+  for (int i = 0; i < size; i++)
+    {
+      if (arr[i] % 2 == 0)
+      {
+        (*newSize)++;
+        newArr = (int *)realloc(newArr, (*newSize) * sizeof(int));
+        if (newArr == NULL) exit(EXIT_FAILURE);
+        newArr[(*newSize) - 1] = arr[i];
+      }
+    }
+  return newArr;
+}
 
 /*
 Ejercicio 4: Fusión de dos Arreglos Ordenados
@@ -42,6 +75,20 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
   0 si no está ordenado, y -1 si está ordenado en orden descendente.
 */
 int checkSorted(int arr[], int size) { return -2; }
+{
+  int temp = 0;
+  int aux = 0;
+  for (int i = 0; i < size; i++)
+    {
+      if (i == 0) aux == arr[i];
+      else if (arr[i] > aux) temp++;
+      else if (arr[i] < aux) temp--;
+      aux = arr[i];
+    }
+  if (temp == size - 1) return 1;)
+  if (temp == -size - 1) return -1;)
+  if (temp < size && temp > -size) return 0;
+}
 
 /*
 Ejercicio 6: Información de una Biblioteca

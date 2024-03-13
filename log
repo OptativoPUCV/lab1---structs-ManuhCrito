@@ -3,3 +3,21 @@ Wed 13 Mar 2024 08:31:30 PM UTC:
  tests:  0|7
 total_score: 0/70
 1107d68
+Wed 13 Mar 2024 09:07:12 PM UTC: 
+ exercises.c | 47 +++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 47 insertions(+)
+In file included from test.c:1:
+exercises.c:13:1: error: expected identifier or ‘(’ before ‘{’ token
+   13 | {
+      | ^
+exercises.c:29:1: error: expected identifier or ‘(’ before ‘{’ token
+   29 | {
+      | ^
+exercises.c:46:1: error: expected identifier or ‘(’ before ‘{’ token
+   46 | {
+      | ^
+exercises.c:78:1: error: expected identifier or ‘(’ before ‘{’ token
+   78 | {
+      | ^
+Compilation failed
+bc86b78
