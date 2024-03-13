@@ -72,7 +72,8 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
       if (i < size1) result[i] = arr1[i];
       else result[i] = arr2[i - size1];
     }
-  
+
+  //Uso un BubbleSort acá porque el profesor me dijo que no se puede usar qsort.
   for (int i = 0; i < nuevaTalla - 1; i++) 
   {
     for (int j = 0; j < nuevaTalla - i - 1; j++) 
@@ -85,7 +86,6 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
       }
     }
   }
-  
 }
 
 /*
@@ -131,7 +131,13 @@ typedef struct {
 } Libro;
 
 void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
-                      int anioNacimiento, int anioPublicacion) {}
+                      int anioNacimiento, int anioPublicacion)
+{
+    strcpy(libro->titulo, titulo);
+    strcpy(libro->autor.nombre, nombreAutor);
+    libro->autor.anioNacimiento = anioNacimiento;
+    libro->anioPublicacion = anioPublicacion;
+}
 
 /*
 Ejercicio 7: Lista enlazada de números
