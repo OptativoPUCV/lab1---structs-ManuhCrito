@@ -43,15 +43,15 @@ los números pares del arreglo original.
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize) { return NULL; }
 {
-  int newArr = NULL;
+  newArr = (int *)realloc(newArr, (*newSize) * sizeof(int));
+  if (newArr == NULL) exit(EXIT_FAILURE);
+  
   *newSize = 0;
   for (int i = 0; i < size; i++)
     {
       if (arr[i] % 2 == 0)
       {
         (*newSize)++;
-        newArr = (int *)realloc(newArr, (*newSize) * sizeof(int));
-        if (newArr == NULL) exit(EXIT_FAILURE);
         newArr[(*newSize) - 1] = arr[i];
       }
     }
