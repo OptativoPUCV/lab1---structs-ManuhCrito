@@ -9,8 +9,7 @@ Ejercicio 1: Encuentra el Elemento Mayor
 Descripción: Escribe una función que tome un arreglo de enteros
 y su tamaño, y devuelva el valor más grande del arreglo.
 */
-int findMax(int arr[], int size) { return 0; }
-{
+int findMax(int arr[], int size) { 
   int maxNum = 0;
   for (int i = 0; i < size; i++)
     {
