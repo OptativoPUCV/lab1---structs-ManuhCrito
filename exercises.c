@@ -84,8 +84,8 @@ int checkSorted(int arr[], int size)
       aux = arr[i];
     }
   if (temp == size - 1) return 1;
-  if (temp == -size - 1) return -1;
-  if (temp < size && temp > -size) return 0;
+  else if (temp == -size - 1) return -1;
+  else if (temp < size && temp > -size) return 0;
 }
 
 
